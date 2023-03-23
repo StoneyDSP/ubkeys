@@ -128,7 +128,7 @@ get_chrome()
 
   curl "https://dl.google.com/linux/direct/google-chrome-stable_current_$ARCH.deb" -o "/tmp/google-chrome.deb"
 
-  echo "deb [arch=$ARCH signed-by=CHROME_KEY] https://dl.google.com/linux/chrome/deb stable main"
+  echo "deb [arch=$ARCH signed-by=$CHROME_KEY] https://dl.google.com/linux/chrome/deb stable main"
 
   apt install "/tmp/google-chrome.deb"
 
