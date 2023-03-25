@@ -69,7 +69,7 @@ get_pgadmin()
 
   curl -fsSL "https://www.pgadmin.org/static/packages_pgadmin_org.pub" | gpg --dearmor -o $PGADMIN_KEY
 
-  echo "deb [signed-by=$PGADMIN_KEY] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$DISTRO pgadmin4 main" > $APT_SOURCES/pgadmin4.list
+  echo "deb [arch=$ARCH signed-by=$PGADMIN_KEY] https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$DISTRO pgadmin4 main" > $APT_SOURCES/pgadmin4.list
 
   apt update
 
